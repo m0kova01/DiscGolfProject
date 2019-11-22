@@ -1,0 +1,21 @@
+.main-grid {
+    min-width: 100%;
+    min-height: calc(100vh - 100px);
+    margin: auto;
+    align-content: center;
+    margin: auto;
+}
+.rank-list {
+    background-color: whitesmoke;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.score-list {
+    background-color: whitesmoke;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.home-button {
+    clear: both;
+    margin-top: 10px;
+}

@@ -3,4 +3,13 @@
     min-height: calc(100vh - 100px);
     margin: auto;
     align-content: center;
+    margin: auto;
+
+}
+.highscores {
+    margin: auto;
+}
+.button {
+    margin-right: 10px;
+    margin-left: 10px;
 }

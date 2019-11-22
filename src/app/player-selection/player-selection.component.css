@@ -1,0 +1,35 @@
+.main-grid {
+    min-width: 100%;
+    min-height: calc(100vh - 100px);
+    margin: auto;
+    align-content: center;
+    margin: auto;
+}
+
+.player-form {
+    background-color: whitesmoke;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+.player-form {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.new-player-button {
+    margin-bottom: 10px;
+}
+
+.cancel-start-button-row {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
