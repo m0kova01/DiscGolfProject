@@ -3,20 +3,22 @@
         <div class="header">
             <h1>Players</h1>
         </div>
-        <div class="player-row">
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Player Name">
-            </mat-form-field>
-        </div>
-        <div class="new-player-button" fxLayoutAlign="center center">    
-                <button mat-raised-button class="button">New Player</button>
-        </div>
+        <form>
+            <div class="player-row">
+                <mat-form-field class="name-field">
+                    <input matInput placeholder="Player Name" id="nameInput">
+                </mat-form-field>
+            </div>
+            <div class="new-player-button" fxLayoutAlign="center center" (click)="addNewPlayer()">    
+                    <button mat-raised-button type="button" class="button">Add Player</button>
+            </div>
+        </form>
         <div fxLayoutAlign="center center">
             <div class="cancel-start-button-row" >    
                 <button mat-raised-button routerLink="/home" class="button">Cancel</button>
             </div>
             <div class="cancel-start-button-row">    
-                <button mat-raised-button class="button">Start</button>
+                <button mat-raised-button class="button" routerLink="/game">Start</button>
             </div>
         </div>
     </div>

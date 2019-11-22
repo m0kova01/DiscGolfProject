@@ -14,7 +14,10 @@ import {MatDialogModule, MatDialogTitle} from '@angular/material/dialog';
 import {MatInputModule, MatInput} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
-
+import { GameComponent } from './game/game.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -23,6 +26,7 @@ import {MatSortModule} from '@angular/material/sort';
     HighscoresComponent,
     PlayerSelectionComponent,
     HomeComponent,
+    GameComponent,
     
   ],
   imports: [
@@ -37,6 +41,9 @@ import {MatSortModule} from '@angular/material/sort';
     MatInputModule,
     MatTableModule,
     MatSortModule,
+    MatTabsModule,
+    MatStepperModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

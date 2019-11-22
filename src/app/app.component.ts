@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'disc-golf-project';
+  
 }
+
+export class PlayerObject {
+  constructor(
+    playerName: string,
+    
+    ) {
+      this.playerName = playerName;
+    }
+    playerName: string;
+    scores: number[];
+    scoreIndex: number = 0;
+
+    addToScore(holeScore: number) {
+      this.scores[this.scoreIndex] = holeScore;
+      this.scoreIndex++;
+    }
+}
+

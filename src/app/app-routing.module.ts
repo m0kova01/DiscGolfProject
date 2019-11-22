@@ -4,12 +4,17 @@ import { PlayerSelectionComponent } from './player-selection/player-selection.co
 import { AppComponent } from './app.component';
 import { HighscoresComponent } from './highscores/highscores.component';
 import { HomeComponent} from './home/home.component'
+import {GameComponent} from './game/game.component'
 
 const routes: Routes = [
   {path: 'highscores', component: HighscoresComponent},
   {path: 'player-selection', component: PlayerSelectionComponent},
   {path: 'home', component: HomeComponent},
   { path: "", pathMatch: "full", redirectTo: "home" },
+  {
+    path: 'game', 
+    component: GameComponent,
+  }
 ];
 
 @NgModule({

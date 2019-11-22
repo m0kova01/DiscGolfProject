@@ -9,18 +9,18 @@
 .player-form {
     background-color: whitesmoke;
 }
-.example-form {
+/* .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-}
+} */
   
-.example-full-width {
+.name-field {
     width: 100%;
 }
 
 .player-form {
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
 }
 
