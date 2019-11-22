@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import {MatListModule} from '@angular/material/list';
 import {MatDialogModule, MatDialogTitle} from '@angular/material/dialog';
 import {MatInputModule, MatInput} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 
 
 
@@ -33,6 +35,8 @@ import {MatInputModule, MatInput} from '@angular/material/input';
     MatListModule,
     MatDialogModule,
     MatInputModule,
+    MatTableModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

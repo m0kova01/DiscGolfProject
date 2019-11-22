@@ -19,3 +19,10 @@
     clear: both;
     margin-top: 10px;
 }
+table {
+    width: 100%;
+}
+.mat-column-position {
+    width: 28% !important;
+
+}

@@ -9,6 +9,7 @@ const routes: Routes = [
   {path: 'highscores', component: HighscoresComponent},
   {path: 'player-selection', component: PlayerSelectionComponent},
   {path: 'home', component: HomeComponent},
+  { path: "", pathMatch: "full", redirectTo: "home" },
 ];
 
 @NgModule({
