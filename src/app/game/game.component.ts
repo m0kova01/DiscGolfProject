@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
 import { PlayerObject } from "../app.component";
+import { FormGroup, FormArray, FormControl } from "@angular/forms";
 
 @Component({
   selector: "app-game",
@@ -9,27 +10,54 @@ import { PlayerObject } from "../app.component";
 })
 export class GameComponent implements OnInit {
   playerAndID: PlayerAndIndex[];
-
+  formGroup: FormGroup;
+  holes: number[];
   constructor(private data: DataService) {
     this.playerAndID = [];
+    this.holes = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ];
+    for (var i = 0; i < this.data.playerCount(); i++) {
+      this.playerAndID.push(
+        new PlayerAndIndex(this.data.returnIndexName(i), i)
+      );
+    }
+
+    var nameArray = new FormArray([]);
+    this.playerAndID.forEach(element => {
+      var scoresArray = new FormArray([]);
+      nameArray.push(scoresArray);
+      this.holes.forEach(element => {
+        scoresArray.push(new FormControl(""));
+      });
+    });
+    this.formGroup = new FormGroup({
+      values: nameArray
+    });
   }
 
-  ngOnInit() {
-    for (var i = 0; i < this.data.playerCount(); i++) {
-      this.playerAndID.push(new PlayerAndIndex(this.data.returnIndexName(i), i));
-    }
-  }
+  ngOnInit() {}
+
   addScoresToArray() {
-    for(var i = 0; i<this.playerAndID.length; i++)
-    {
-      var scores: number[] = [];
-      var nameInput = document.getElementsByClassName("{{i}}"); //could be problem
-      for(var j = 0; j < nameInput.length; j++)
-      {
-        scores.push(parseInt(nameInput[j].nodeValue))
-      }
-      this.data.addToScores(scores, this.playerAndID[i].index)
-    }
+    var score = this.formGroup.
+
   }
 }
 export class PlayerAndIndex {
@@ -40,4 +68,3 @@ export class PlayerAndIndex {
     this.index = id;
   }
 }
-

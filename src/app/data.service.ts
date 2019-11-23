@@ -7,14 +7,12 @@ import { PlayerObject } from "./app.component";
 })
 export class DataService {
   private playerArray: PlayerObject[];
-  // private playerIndex: number = 0;
   constructor() {
     this.playerArray = [];
   }
   
   addPlayer(player: PlayerObject) {
     this.playerArray.push(player);
-    // this.playerIndex++
   }
   returnIndexName(index: number) {
     return this.playerArray[index].playerName;
@@ -22,16 +20,18 @@ export class DataService {
   playerCount() {
     return this.playerArray.length;
   }
-  returnEachPlayerObject() {
-    return this.playerArray;
+
+  returnEachPlayerScore(index: number) {
+    return this.playerArray[index].totalScore;
   }
-  addToScores(holesArray: number[], index: number) {
-    for (var i = 0; i < holesArray.length; i++) {
-      this.playerArray[index].scores.push(holesArray[i]);
-    }
+  addToScores(numberToAdd: number, index: number) {
+    this.playerArray[index].scores.push(numberToAdd);
   }
 
   totalScores(index: number) {
-    return this.playerArray[index].scores.reduce((x, y) => x + y);
+    for(var i = 0; i < this.playerCount(); i++)
+    {
+      this.playerArray[i].totalScore = this.playerArray[index].scores.reduce((x, y) => x + y);
+    } 
   }
 }

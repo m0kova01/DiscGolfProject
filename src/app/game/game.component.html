@@ -1,153 +1,38 @@
 <div class="main-grid">
-  <div class="tab-container" flexA>
+  <div class="tab-container" [formGroup]="formGroup">
     <mat-card>
-      <mat-tab-group class="tabs">
-        <mat-tab label="1">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}">
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="2">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="3">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="4">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="5">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="6">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="7">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="8">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="9">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div> </mat-tab
-        ><mat-tab label="10">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="11">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="12">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="13">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="14">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="15">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="16">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="17">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-        </mat-tab>
-        <mat-tab label="18">
-          <div *ngFor="let name of playerAndID">
-            <h3>{{ name.name }}</h3>
-            <mat-form-field class="scoreInput">
-              <input matInput placeholder="Score" class="{{name.index}}"/>
-            </mat-form-field>
-          </div>
-          <div class="submit-game-button">    
-              <button mat-raised-button class="submit" routerLink="/results">Submit</button>
-          </div>
-        </mat-tab>
+      <mat-tab-group class="tabs" formArrayName="values">
+        <ng-container *ngFor="let hole of holes; index as x">
+          <mat-tab label="{{ hole }}">
+            <div
+              *ngFor="let player of playerAndID; index as y"
+              [formArrayName]="y"
+            >
+              <h3>{{ player.name }}</h3>
+              <mat-form-field class="scoreInput">
+                <input
+                  matInput
+                  placeholder="Score"
+                  type="number"
+                  class="form-control"
+                  name="score"
+                  [formControlName]="x"
+                />
+              </mat-form-field>
+              <div class="submit-game-button" *ngIf="(hole==18 && (y == playerAndID.length-1))">
+                <button
+                  mat-raised-button
+                  (click)="addScoresToArray()"
+                  class="submit"
+                  type="button"
+                  routerLink="/results"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </mat-tab>
+        </ng-container>
       </mat-tab-group>
     </mat-card>
   </div>

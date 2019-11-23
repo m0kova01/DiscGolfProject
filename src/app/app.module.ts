@@ -19,6 +19,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
 import { ResultsComponent } from './results/results.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { ResultsComponent } from './results/results.component';
     HomeComponent,
     GameComponent,
     ResultsComponent,
+    
     
   ],
   imports: [
@@ -45,7 +48,10 @@ import { ResultsComponent } from './results/results.component';
     MatSortModule,
     MatTabsModule,
     MatStepperModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
