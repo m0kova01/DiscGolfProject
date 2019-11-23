@@ -18,6 +18,7 @@ import { GameComponent } from './game/game.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
+import { ResultsComponent } from './results/results.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     PlayerSelectionComponent,
     HomeComponent,
     GameComponent,
+    ResultsComponent,
     
   ],
   imports: [

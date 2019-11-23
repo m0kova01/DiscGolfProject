@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { PlayerObject } from "../app.component";
+import { setDefaultService } from "selenium-webdriver/chrome";
+import { DataService } from "../data.service";
 
 @Component({
   selector: "app-player-selection",
@@ -7,20 +9,15 @@ import { PlayerObject } from "../app.component";
   styleUrls: ["./player-selection.component.css"]
 })
 export class PlayerSelectionComponent implements OnInit {
-  players: PlayerObject[];
+  constructor(private data: DataService) {}
 
-  constructor() {}
+  ngOnInit() {}
 
-  ngOnInit() {
-    this.players = [];
-  }
-
-  addNewPlayer() {
+  pushPlayer() {
     var element = <HTMLInputElement>document.getElementById("nameInput");
-    var nameInput = (<HTMLInputElement>document.getElementById("nameInput"))
-      .value;
+    var nameInput = (<HTMLInputElement>document.getElementById("nameInput")).value;
     var playerObject = new PlayerObject(nameInput);
-    this.players.push(playerObject);
+    this.data.addPlayer(playerObject);
     element.value = "";
   }
 }

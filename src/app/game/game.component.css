@@ -13,9 +13,12 @@
 
 .tab-container {
   max-width: 60vw;
-  margin: auto;
-  padding-top: 40vh;
+  margin: auto; 
+  padding-top: 10%;
 }
-.spacer {
-  height: 20vh;
+
+.submit {
+  float: right;
+  margin-top: 10px;
+  background-color: #5efc82;
 }
