@@ -1,7 +1,22 @@
-<div class="main-grid" fxFlex="1 1 100%" fxLayoutAlign="center center">
-    <button mat-raised-button routerLink="/player-selection" class="button">New Game</button>
-    <button mat-raised-button routerLink="/highscores" class="button">Highscores</button>
+<div class="main-grid">
+  <div class="main-container" fxAlign="center">
+    <div fxLayoutAlign="center" class="welcome-label">
+      <h2>Welcome</h2>
+    </div>
+    <div fxLayoutAlign="center" class="buttons">
+      <button mat-button routerLink="/player-selection" class="button">
+        New Game
+      </button>
+      <button mat-button routerLink="/highscores" class="button">
+        Highscores
+      </button>
+    </div>
+    <div fxLayoutAlign="center" class="how-to-play">
+      <button mat-button class="button">
+        How To Play
+      </button>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
-

@@ -1,15 +1,43 @@
 .main-grid {
-    min-width: 100%;
-    min-height: calc(100vh - 100px);
-    margin: auto;
-    align-content: center;
-    margin: auto;
-
+  min-width: 100%;
+  min-height: calc(100vh - 100px);
+  margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
 }
 .highscores {
-    margin: auto;
+  margin: auto;
+}
+
+.main-container {
+  background-color: #F9F9F8;
+  border-radius: 10px;
+}
+.welcome-label {
+  color: #E3E3DA;
+  background-color: #C4001A;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding-top: 10px;
 }
 .button {
-    margin-right: 10px;
-    margin-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #F9F9F8;
+  color: #C4001A;
+}
+
+.buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  color: #2B292B;
+}
+
+.how-to-play {
+  margin-bottom: 10px;
 }

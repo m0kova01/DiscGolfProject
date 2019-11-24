@@ -22,6 +22,8 @@ import { ResultsComponent } from './results/results.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 
@@ -55,6 +57,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CommonModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
