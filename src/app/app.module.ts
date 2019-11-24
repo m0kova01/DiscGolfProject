@@ -21,6 +21,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ResultsComponent } from './results/results.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 @NgModule({
@@ -52,6 +54,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
