@@ -11,11 +11,22 @@
     border-radius: 5px;
     padding: 10px;
 } */
-table {
-  width: 100%;
-}
 
 .home-button {
   clear: both;
   margin-top: 10px;
+}
+td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  padding: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+}
+td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
+  padding-right: 24px;
+  padding-left: 24px;
 }

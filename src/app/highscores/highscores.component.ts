@@ -20,6 +20,7 @@ export class HighscoresComponent implements OnInit {
   listOfScores: PlayerObject[];
 
   constructor(private data: DataService) {
+    
     this.listOfScores = this.data.returnHighScores();
     this.dataSource = [];
     if (this.listOfScores != null) {

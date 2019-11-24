@@ -1,24 +1,24 @@
-<div class="main-grid" fxFlex="1 1 100%" fxLayoutAlign="center center">
-    <div class="player-form">
-        <div class="header">
-            <h1>Players</h1>
+<div class="main-grid" fxFlex="1 1 100%">
+    <div class="player-form" fxAlign="center">
+        <div class="header" fxLayoutAlign="center">
+            <h1>Add Players</h1>
         </div>
         <form>
             <div class="player-row">
-                <mat-form-field class="name-field">
+                <mat-form-field class="name-field" fxLayoutAlign="center">
                     <input matInput placeholder="Player Name" id="nameInput">
                 </mat-form-field>
             </div>
             <div class="new-player-button" fxLayoutAlign="center center" (click)="pushPlayer()">    
-                    <button mat-raised-button type="button"  (click)="openSnackBar()" class="button">Add Player</button>
+                    <button mat-button type="button"  (click)="openSnackBar()" class="button">Add Player</button>
             </div>
         </form>
         <div fxLayoutAlign="center center">
             <div class="cancel-start-button-row" >    
-                <button mat-raised-button routerLink="/home" class="button">Cancel</button>
+                <button mat-button routerLink="/home" class="button">Cancel</button>
             </div>
             <div class="cancel-start-button-row">    
-                <button mat-raised-button class="button" routerLink="/game">Start</button>
+                <button mat-button class="button" routerLink="/game">Start</button>
             </div>
         </div>
     </div>

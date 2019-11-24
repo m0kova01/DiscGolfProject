@@ -25,11 +25,11 @@ export class ResultsComponent implements OnInit {
         score: this.sortedPlayersAndScores[i].totalScore
       };
     }
+    this.data.generateNewHighScores(this.sortedPlayersAndScores);
   }
   ngOnInit() {}
 
   clearPlayers() {
-    this.data.generateNewHighScores(this.sortedPlayersAndScores);
     this.data.clearPlayerArr();
   }
 }

@@ -25,7 +25,7 @@ export class PlayerSelectionComponent implements OnInit {
   }
   openSnackBar() {
     var nameInput = (<HTMLInputElement>document.getElementById("nameInput")).value;
-    this._snackBar.open(nameInput + " Added!", "Hide", {
+    this._snackBar.open(nameInput + " added!", "Hide", {
       duration: 2000
     });
   }

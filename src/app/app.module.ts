@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -58,6 +60,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatGridListModule,
+    MatBottomSheetModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

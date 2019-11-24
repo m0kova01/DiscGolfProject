@@ -11,10 +11,34 @@
         Highscores
       </button>
     </div>
-    <div fxLayoutAlign="center" class="how-to-play">
-      <button mat-button class="button">
-        How To Play
-      </button>
+    <div fxLayoutAlign="center">
+    <mat-expansion-panel class="expansion-panel">
+      <mat-expansion-panel-header>
+        <mat-panel-title>How To Use</mat-panel-title>
+      </mat-expansion-panel-header>
+      <hr>
+      <h3>Features</h3>
+      <ul class="feature-list">
+        <li><strong> Game:</strong> Allows you to enter scores throughout your game.</li>
+        <li><strong>Highscores:</strong> Lists the top 10 scores from your games.</li>
+      </ul>
+      <hr>
+      <h3>Keeping Score</h3>
+      <ol class="score-list">
+        <li>Click <em>New Game</em></li>
+        <li>For each player, enter their name and hit <em>Add Player</em>.</li>
+        <li>When all players are entered, click <em>Start</em>.</li>
+        <li>Enter each player's score as you work your way through the course. Hit <em>Submit</em> when finished.</li>
+      </ol>
+      <hr>
+      <h3>Highscores</h3>
+      <ul class="feature-list">
+        <li>The highscores feature keeps track of the current high scores. After each game, this list is automatically updated.</li>
+        <br>
+        <li><strong>NOTE:</strong> the list currently does not support saving after a refresh, this will be added soon!</li>
+      </ul>
+      
+    </mat-expansion-panel>
     </div>
   </div>
 </div>

@@ -5,7 +5,7 @@
   fxLayoutAlign="center"
 >
   <div class="lists" fxLayoutAlign="center center">
-    <div>
+    <div class="highscores-form">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <!-- Position -->
         <ng-container matColumnDef="position" class="container">
@@ -26,17 +26,16 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
     </div>
-
-    <div class="home-button" fxLayoutAlign="center center">
-      <button
-        mat-raised-button
-        routerLink="/home"
-        (click)="goHome()"
-        class="button"
-      >
-        Home
-      </button>
-    </div>
+  </div>
+  <div class="home-button" fxLayoutAlign="center center">
+    <button
+      mat-raised-button
+      routerLink="/home"
+      (click)="goHome()"
+      class="button"
+    >
+      Home
+    </button>
   </div>
 </div>
 

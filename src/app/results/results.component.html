@@ -1,4 +1,9 @@
-<div class="main-grid" fxFlex="1 1 100%" fxLayoutAlign="center" fxLayout="column">
+<div
+  class="main-grid"
+  fxFlex="1 1 100%"
+  fxLayoutAlign="center"
+  fxLayout="column"
+>
   <div class="lists" fxLayoutAlign="center center">
     <div class="results-form">
       <table mat-table [dataSource]="resultsData" class="mat-elevation-z8">
@@ -22,8 +27,15 @@
       </table>
     </div>
   </div>
-  <div class="home-button" fxLayoutAlign="center center">    
-      <button mat-raised-button routerLink="/home" (click)="clearPlayers()" class="button">Home</button>
+  <div class="home-button" fxLayoutAlign="center center">
+    <button
+      mat-raised-button
+      routerLink="/home"
+      (click)="clearPlayers()"
+      class="button"
+    >
+      Home
+    </button>
   </div>
 </div>
 <router-outlet></router-outlet>

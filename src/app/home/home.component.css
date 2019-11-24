@@ -1,6 +1,6 @@
 .main-grid {
   min-width: 100%;
-  min-height: calc(100vh - 100px);
+  min-height: 80%;
   margin: auto;
   flex-direction: column;
   box-sizing: border-box;
@@ -19,16 +19,16 @@
 }
 .welcome-label {
   color: #E3E3DA;
-  background-color: #C4001A;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  background-color: #7f0000;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   padding-top: 10px;
 }
 .button {
   margin-right: 10px;
   margin-left: 10px;
   background-color: #F9F9F8;
-  color: #C4001A;
+  color: #7f0000;
 }
 
 .buttons {
@@ -40,4 +40,18 @@
 
 .how-to-play {
   margin-bottom: 10px;
+}
+
+.feature-list {
+  list-style-type: none;
+  width: 80%;
+}
+
+.score-list {
+  width: 80%;
+}
+.expansion-panel {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
 }
