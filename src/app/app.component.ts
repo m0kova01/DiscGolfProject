@@ -12,14 +12,10 @@ export class AppComponent {
 export class PlayerObject {
   constructor(playerName: string) {
     this.playerName = playerName;
+    this.scores = [];
+    this.totalScore = 0;
   }
   playerName: string;
   scores: number[];
   totalScore: number;
-  scoreIndex: number = 0;
-
-//   addToScore(holeScore: number) {
-//     this.scores[this.scoreIndex] = holeScore;
-//     this.scoreIndex++;
-//   }
 }

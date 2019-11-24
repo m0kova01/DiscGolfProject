@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { DataService } from "../data.service";
+import { PlayerAndIndex } from "../game/game.component";
+import { PlayerObject } from "../app.component";
 
 export interface PeriodicElement {
   position: number;
@@ -6,30 +9,34 @@ export interface PeriodicElement {
   score: number;
 }
 
-const HIGHSCORES_DATA: PeriodicElement[] = [
-  {position: 1, name: "Calros", score: 61},
-  {position: 2, name: "Mate", score: 64},
-  {position: 3, name: "Zach", score: 62},
-  {position: 4, name: "Abel", score: 67},
-  {position: 5, name: "JP", score: 63},
-  {position: 6, name: "Carlos", score: 67},
-  {position: 7, name: "Mate", score: 75},
-  {position: 8, name: "Zach", score: 23},
-  {position: 9, name: "Abel", score: 620},
-  {position: 10, name: "JP", score: 70},
-];
-
 @Component({
-  selector: 'app-highscores',
-  templateUrl: './highscores.component.html',
-  styleUrls: ['./highscores.component.css']
+  selector: "app-highscores",
+  templateUrl: "./highscores.component.html",
+  styleUrls: ["./highscores.component.css"]
 })
 export class HighscoresComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'score'];
-  dataSource = HIGHSCORES_DATA;
-  constructor() { }
+  displayedColumns: string[] = ["position", "name", "score"];
+  dataSource: PeriodicElement[];
+  listOfScores: PlayerObject[];
 
-  ngOnInit() {
+  constructor(private data: DataService) {
+    this.listOfScores = this.data.returnHighScores();
+    this.dataSource = [];
+    if (this.listOfScores != null) {
+      for (var i = 0; i < this.listOfScores.length; i++) {
+        this.dataSource[i] = {
+          position: i + 1,
+          name: this.listOfScores[i].playerName,
+          score: this.listOfScores[i].totalScore
+        };
+      }
+    }
   }
 
+  ngOnInit() {}
+
+  goHome() {
+    this.data.generateNewHighScores(this.listOfScores);
+    this.data.clearPlayerArr();
+  }
 }

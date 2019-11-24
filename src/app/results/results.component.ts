@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
+import { PeriodicElement } from "../highscores/highscores.component";
+import { PlayerObject } from "../app.component";
 
 @Component({
   selector: "app-results",
@@ -7,20 +9,29 @@ import { DataService } from "../data.service";
   styleUrls: ["./results.component.css"]
 })
 export class ResultsComponent implements OnInit {
-  amountOfPlayers: number[];
-  names: string[];
-  totalScore: number[];
+  displayedColumns: string[] = ["position", "name", "score"];
+  sortedPlayersAndScores: PlayerObject[];
+  resultsData: PeriodicElement[];
 
   constructor(private data: DataService) {
-    this.amountOfPlayers = [];
-    this.names = [];
-    this.totalScore = [];
+    this.data.totalScores();
+    this.sortedPlayersAndScores = this.data.insertionSort();
+    this.resultsData = [];
+
     for (var i = 0; i < this.data.playerCount(); i++) {
-      this.amountOfPlayers.push(i);
-      this.names[i] = this.data.returnIndexName(i);
-      this.totalScore[i] = this.data.returnEachPlayerScore(i);
+      this.resultsData[i] = {
+        position: i + 1,
+        name: this.sortedPlayersAndScores[i].playerName,
+        score: this.sortedPlayersAndScores[i].totalScore
+      };
     }
   }
-
   ngOnInit() {}
+
+  clearPlayers() {
+    this.data.generateNewHighScores(this.sortedPlayersAndScores);
+    this.data.clearPlayerArr();
+  }
 }
+
+

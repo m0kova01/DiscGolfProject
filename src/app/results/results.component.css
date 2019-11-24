@@ -6,8 +6,16 @@
   margin: auto;
 }
 
-.results-form {
+/* .results-form {
     background-color: white;
     border-radius: 5px;
     padding: 10px;
+} */
+table {
+  width: 100%;
+}
+
+.home-button {
+  clear: both;
+  margin-top: 10px;
 }

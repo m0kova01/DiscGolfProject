@@ -1,19 +1,29 @@
-<div class="main-grid" fxFlex="1 1 100%" fxLayoutAlign="center center">
-  <div class="results-form">
-    <table mat-table class="mat-elevation-z8">
-      <!-- Position -->
-      <ng-container matColumnDef="position">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
-      </ng-container>
-      <!-- Name -->
-      <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
-      </ng-container>
-      <!-- Score -->
-      <ng-container matColumnDef="score">
-          <th mat-header-cell *matHeaderCellDef> Score </th>
-      </ng-container>
-  </table>
+<div class="main-grid" fxFlex="1 1 100%" fxLayoutAlign="center" fxLayout="column">
+  <div class="lists" fxLayoutAlign="center center">
+    <div class="results-form">
+      <table mat-table [dataSource]="resultsData" class="mat-elevation-z8">
+        <!-- Name -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+        </ng-container>
+        <!-- Name -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
+        <!-- Score -->
+        <ng-container matColumnDef="score">
+          <th mat-header-cell *matHeaderCellDef>Score</th>
+          <td mat-cell *matCellDef="let element">{{ element.score }}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+  <div class="home-button" fxLayoutAlign="center center">    
+      <button mat-raised-button routerLink="/home" (click)="clearPlayers()" class="button">Home</button>
   </div>
 </div>
 <router-outlet></router-outlet>

@@ -56,8 +56,16 @@ export class GameComponent implements OnInit {
   ngOnInit() {}
 
   addScoresToArray() {
-    var score = this.formGroup.
-
+    var firstArray = this.formGroup.value.values;
+    for (var i = 0; i < this.playerAndID.length; i++) {
+      for (var j = 0; j < 18; j++) {
+        if (firstArray[i][j] > 0) {
+          this.data.addToScores(firstArray[i][j], i);
+        } else {
+          this.data.addToScores(0, i);
+        }
+      }
+    }
   }
 }
 export class PlayerAndIndex {

@@ -21,8 +21,10 @@
 }
 table {
     width: 100%;
+    
 }
 .mat-column-position {
     width: 28% !important;
-
+    margin-right: 10px;
 }
+
