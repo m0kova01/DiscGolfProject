@@ -1,4 +1,4 @@
-import { Injectable, ChangeDetectorRef } from '@angular/core';
+import { Injectable, ChangeDetectorRef, ApplicationRef } from '@angular/core';
 import { MediaMatcher } from "@angular/cdk/layout"
 
 
@@ -13,7 +13,7 @@ export class UtilityService {
   public isMobile: boolean;
   constructor(
     public media: MediaMatcher,
-    public ref: ChangeDetectorRef
+    public ref: ApplicationRef,
   ) {
     this.GetMediaQuery();
     this.isMobile = this.mediaQuery.matches;
@@ -21,7 +21,7 @@ export class UtilityService {
   GetMediaQuery(): boolean {
     this.mediaQuery = this.media.matchMedia('(max-width: 800px)');
     this.mediaQuery2 = this.media.matchMedia('(min-width: 1020px)');
-    this.mobileQueryListener = () => this.ref.detectChanges();
+    this.mobileQueryListener = () => this.ref.tick();
     this.mediaQuery.addListener(this.mobileQueryListener);
     this.mediaQuery2.addListener(this.mobileQueryListener);
     return this.mediaQuery.matches;
