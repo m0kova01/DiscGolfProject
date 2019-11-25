@@ -55,3 +55,26 @@
   border-bottom-right-radius: 10px;
   
 }
+.mobile {
+  min-width: 100%;
+  min-height: 80%;
+  margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  background-image: url("img/golfBackground.jpg");
+}
+.desktop {
+  min-width: 100%;
+  min-height: 80%;
+  margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}

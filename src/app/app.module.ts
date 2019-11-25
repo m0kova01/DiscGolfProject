@@ -25,6 +25,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { UtilityService } from './utility.service';
 
 
 
@@ -37,8 +38,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
     HomeComponent,
     GameComponent,
     ResultsComponent,
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -63,7 +62,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatBottomSheetModule,
     MatExpansionModule,
   ],
-  providers: [],
+  providers: [UtilityService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

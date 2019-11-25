@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
-import { PlayerObject } from "../app.component";
 import { FormGroup, FormArray, FormControl } from "@angular/forms";
 
 @Component({
