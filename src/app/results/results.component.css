@@ -1,16 +1,31 @@
-.main-grid {
+.desktop {
   min-width: 100%;
-  min-height: calc(100vh - 100px);
+  min-height: 100%;
   margin: auto;
-  align-content: center;
-  margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  background-image: url("img/mobileBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-/* .results-form {
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-} */
+.mobile {
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  background-image: url("img/mobileBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
 .home-button {
   clear: both;

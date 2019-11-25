@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
 import { FormGroup, FormArray, FormControl } from "@angular/forms";
+import { UtilityService } from '../utility.service';
 
 @Component({
   selector: "app-game",
@@ -11,7 +12,7 @@ export class GameComponent implements OnInit {
   playerAndID: PlayerAndIndex[];
   formGroup: FormGroup;
   holes: number[];
-  constructor(private data: DataService) {
+  constructor(private data: DataService, private utility: UtilityService) {
     this.playerAndID = [];
     this.holes = [
       1,
@@ -51,6 +52,7 @@ export class GameComponent implements OnInit {
       values: nameArray
     });
   }
+  isMobile: boolean;
 
   ngOnInit() {}
 

@@ -1,4 +1,4 @@
-<div class="main-grid">
+<div [class.desktop]="!isMobile" [class.mobile]="isMobile">
   <div class="tab-container" [formGroup]="formGroup">
     <mat-card>
       <mat-tab-group class="tabs" formArrayName="values">

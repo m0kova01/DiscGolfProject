@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
 import { PeriodicElement } from "../highscores/highscores.component";
 import { PlayerObject } from "../app.component";
+import { UtilityService } from '../utility.service';
 
 @Component({
   selector: "app-results",
@@ -13,7 +14,7 @@ export class ResultsComponent implements OnInit {
   sortedPlayersAndScores: PlayerObject[];
   resultsData: PeriodicElement[];
 
-  constructor(private data: DataService) {
+  constructor(private data: DataService, private utility: UtilityService) {
     this.data.totalScores();
     this.sortedPlayersAndScores = this.data.insertionSort();
     this.resultsData = [];
@@ -27,6 +28,7 @@ export class ResultsComponent implements OnInit {
     }
     this.data.generateNewHighScores(this.sortedPlayersAndScores);
   }
+  isMobile: boolean;
   ngOnInit() {}
 
   clearPlayers() {

@@ -1,9 +1,30 @@
-.main-grid {
+.desktop {
   min-width: 100%;
-  min-height: calc(100vh - 100px);
+  min-height: 100%;
   margin: auto;
-  align-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  background-image: url("img/mobileBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mobile {
+  min-width: 100%;
+  min-height: 100%;
   margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  background-image: url("img/mobileBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .tabs {

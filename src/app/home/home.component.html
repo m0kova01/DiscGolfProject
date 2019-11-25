@@ -1,6 +1,6 @@
-<div  [class.mobile]="!isMobile" [class.desktop]="isMobile">
-  <div class="main-container" fxAlign="center">
-    <div fxLayoutAlign="center" class="welcome-label">
+<div  [class.desktop]="!isMobile" [class.mobile]="isMobile">
+  <div [class.main-container-desktop]="!isMobile" [class.main-container-mobile]="isMobile" fxAlign="center">
+    <div fxLayoutAlign="center" [class.welcome-label-desktop]="!isMobile" [class.welcome-label-mobile]="isMobile">
       <h2>Welcome</h2>
     </div>
     <div fxLayoutAlign="center" class="buttons">
@@ -12,7 +12,7 @@
       </button>
     </div>
     <div fxLayoutAlign="center">
-    <mat-expansion-panel class="expansion-panel">
+    <mat-expansion-panel [class.expansion-panel-desktop]="!isMobile" [class.expansion-panel-mobile]="isMobile">
       <mat-expansion-panel-header>
         <mat-panel-title>How To Use</mat-panel-title>
       </mat-expansion-panel-header>

@@ -1,4 +1,4 @@
-.main-grid {
+/* .main-grid {
   min-width: 100%;
   min-height: calc(100vh - 100px);
   margin: auto;
@@ -9,6 +9,33 @@
   place-content: center;
   align-items: center;
   flex: 1 1 auto;
+} */
+.desktop {
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  background-image: url("img/mobileBackground.jpg");
+}
+.mobile {
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  background-image: url("img/ezgif.com-video-to-gif.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .player-row {

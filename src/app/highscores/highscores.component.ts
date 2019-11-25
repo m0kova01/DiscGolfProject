@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
 import { PlayerAndIndex } from "../game/game.component";
 import { PlayerObject } from "../app.component";
+import { UtilityService } from '../utility.service';
 
 export interface PeriodicElement {
   position: number;
@@ -19,7 +20,7 @@ export class HighscoresComponent implements OnInit {
   dataSource: PeriodicElement[];
   listOfScores: PlayerObject[];
 
-  constructor(private data: DataService) {
+  constructor(private data: DataService, private utility: UtilityService) {
     
     this.listOfScores = this.data.returnHighScores();
     this.dataSource = [];
@@ -33,7 +34,7 @@ export class HighscoresComponent implements OnInit {
       }
     }
   }
-
+  isMobile: boolean;
   ngOnInit() {}
 
   goHome() {

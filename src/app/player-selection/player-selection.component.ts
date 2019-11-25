@@ -3,6 +3,7 @@ import { PlayerObject } from "../app.component";
 import { setDefaultService } from "selenium-webdriver/chrome";
 import { DataService } from "../data.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { UtilityService } from '../utility.service';
 
 @Component({
   selector: "app-player-selection",
@@ -10,9 +11,11 @@ import { MatSnackBar } from "@angular/material/snack-bar";
   styleUrls: ["./player-selection.component.css"]
 })
 export class PlayerSelectionComponent implements OnInit {
-  constructor(private data: DataService, private _snackBar: MatSnackBar) {}
-
-  ngOnInit() {}
+  constructor(private data: DataService, private _snackBar: MatSnackBar, private utility: UtilityService) { }
+  isMobile: boolean;
+  ngOnInit() {
+    this.isMobile = this.utility.GetMediaQuery();
+   }
 
   pushPlayer() {
     var element = <HTMLInputElement>document.getElementById("nameInput");

@@ -1,9 +1,4 @@
-<div
-  class="main-grid"
-  fxFlex="1 1 100%"
-  fxLayout="column"
-  fxLayoutAlign="center"
->
+<div [class.desktop]="!isMobile" [class.mobile]="isMobile">
   <div class="lists" fxLayoutAlign="center center">
     <div class="highscores-form">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -28,12 +23,7 @@
     </div>
   </div>
   <div class="home-button" fxLayoutAlign="center center">
-    <button
-      mat-raised-button
-      routerLink="/home"
-      (click)="goHome()"
-      class="button"
-    >
+    <button mat-raised-button routerLink="/home" (click)="goHome()" class="button">
       Home
     </button>
   </div>
