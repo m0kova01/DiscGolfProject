@@ -24,7 +24,7 @@
   flex: 1 1 auto;
   background-image: url("img/mobileBackground.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: cover;
 }
 
 .main-container-desktop {
