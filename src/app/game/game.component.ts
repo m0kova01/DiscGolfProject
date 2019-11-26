@@ -51,6 +51,11 @@ export class GameComponent implements OnInit {
     this.formGroup = new FormGroup({
       values: nameArray
     });
+
+    if(localStorage.getItem("arrayOfHighScores") === null)
+    {
+      this.data.arrayOfHighScores=[];
+    }
   }
   isMobile: boolean;
 

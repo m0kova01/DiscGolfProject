@@ -18,6 +18,7 @@ export class ResultsComponent implements OnInit {
     this.data.totalScores();
     this.sortedPlayersAndScores = this.data.insertionSort();
     this.resultsData = [];
+    
 
     for (var i = 0; i < this.data.playerCount(); i++) {
       this.resultsData[i] = {
