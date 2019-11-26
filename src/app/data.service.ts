@@ -97,7 +97,7 @@ export class DataService {
   }
 
   returnHighScores() {
-    var retrievedList = localStorage.getItem("arrayOfHighScores") || "";
+    var retrievedList = localStorage.getItem("arrayOfHighScores");
     this.arrayOfHighScores = (JSON.parse(retrievedList));
     return this.arrayOfHighScores;
   }
