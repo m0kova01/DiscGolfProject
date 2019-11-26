@@ -23,8 +23,11 @@
     </div>
   </div>
   <div class="home-button" fxLayoutAlign="center center">
-    <button mat-raised-button routerLink="/home" (click)="goHome()" class="button">
+    <button mat-raised-button routerLink="/home" class="button">
       Home
+    </button>
+    <button mat-raised-button (click)="clearHighscores()" class="button">
+      Reset Highscores
     </button>
   </div>
 </div>

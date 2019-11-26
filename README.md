@@ -2,5 +2,8 @@ This project is simply a hobby project that I made for me and my friends. It can
 
 Currently working on:
     Additional styling.
-    Fixing local saves bug.
-    Implementing Google Sign-In for users to store player's highscores.
+    Implementing Google Sign-In for users to store player's highscores in the cloud.
+
+Recent Updates:
+    Added styling.
+    Fixed local storage not saving after refresh

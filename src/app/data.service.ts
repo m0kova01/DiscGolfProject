@@ -60,6 +60,13 @@ export class DataService {
   clearPlayerArr() {
     this.playerArray = [];
   }
+  clearHighscores(){
+    this.arrayOfHighScores = [];
+    localStorage.setItem(
+      "arrayOfHighScores",
+      JSON.stringify(this.arrayOfHighScores)
+    )
+  }
 
   generateNewHighScores(currentGameScores: PlayerObject[]) {
     //add current game's scores to the array of highscores
@@ -90,9 +97,8 @@ export class DataService {
   }
 
   returnHighScores() {
-    var retrievedList = localStorage.getItem("arrayOfHighScores");
-
-    this.generateNewHighScores(JSON.parse(retrievedList));
+    var retrievedList = localStorage.getItem("arrayOfHighScores") || "";
+    this.arrayOfHighScores = (JSON.parse(retrievedList));
     return this.arrayOfHighScores;
   }
 }
