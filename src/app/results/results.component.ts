@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
 import { PeriodicElement } from "../highscores/highscores.component";
-import { PlayerObject } from "../app.component";
+import { PlayerObject } from "../models/PlayerObject";
 import { UtilityService } from "../utility.service";
 
 @Component({
