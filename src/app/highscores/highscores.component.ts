@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { DataService } from "../data.service";
+import { DataService } from "../services/data.service";
 import { PlayerAndIndex } from "../game/game.component";
 import { PlayerObject } from "../models/PlayerObject";
-import { UtilityService } from "../utility.service";
+import { UtilityService } from "../services/utility.service";
 
 export interface PeriodicElement {
   position: number;

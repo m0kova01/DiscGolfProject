@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { DataService } from "../data.service";
+import { DataService } from "../services/data.service";
 import { FormGroup, FormArray, FormControl } from "@angular/forms";
-import { UtilityService } from '../utility.service';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
   selector: "app-game",

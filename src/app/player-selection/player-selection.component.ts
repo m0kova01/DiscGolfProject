@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { PlayerObject } from "../models/PlayerObject";
-import { setDefaultService } from "selenium-webdriver/chrome";
-import { DataService } from "../data.service";
+import { DataService } from "../services/data.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { UtilityService } from '../utility.service';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
   selector: "app-player-selection",
