@@ -36,23 +36,28 @@ export class PlayerSelectionComponent implements OnInit {
     var element = <HTMLInputElement>document.getElementById("nameInput");
     var nameInput = (<HTMLInputElement>document.getElementById("nameInput"))
       .value;
+    if(nameInput === "") {
+      this.noPlayerEnteredSnackBar();
+    }
+    else {
     var playerObject = new PlayerObject(nameInput);
     this.data.addPlayer(playerObject);
     this.enoughPlayers = true;
-
+    this.playerAddedSnackBar();
     element.value = "";
+    }
   }
 
-  noPlayersMessage() {
-    this._snackBar.open("Need at least one person to play!", "Hide", {
+  playerAddedSnackBar() {
+    var nameInput = (<HTMLInputElement>document.getElementById("nameInput"))
+      .value;
+    this._snackBar.open(nameInput + " added!", "Hide", {
       duration: 2000
     });
   }
 
-  openSnackBar() {
-    var nameInput = (<HTMLInputElement>document.getElementById("nameInput"))
-      .value;
-    this._snackBar.open(nameInput + " added!", "Hide", {
+  noPlayerEnteredSnackBar() {
+    this._snackBar.open("Please enter a player name!", "Hide", {
       duration: 2000
     });
   }
