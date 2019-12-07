@@ -3,6 +3,7 @@ import { DataService } from "../services/data.service";
 import { PlayerAndIndex } from "../game/game.component";
 import { PlayerObject } from "../models/PlayerObject";
 import { UtilityService } from "../services/utility.service";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 export interface PeriodicElement {
   position: number;
@@ -20,7 +21,11 @@ export class HighscoresComponent implements OnInit {
   dataSource: PeriodicElement[];
   listOfScores: PlayerObject[];
 
-  constructor(private data: DataService, private utility: UtilityService) {
+  constructor(
+    private data: DataService,
+    private utility: UtilityService,
+    private _snackBar: MatSnackBar
+  ) {
     this.listOfScores = this.data.returnHighScores();
     this.dataSource = [];
     if (this.listOfScores != null) {
@@ -38,5 +43,13 @@ export class HighscoresComponent implements OnInit {
 
   clearHighscores() {
     this.data.clearHighscores();
+    this.dataSource = [];
+    this.clearHighscoresSnackBar();
+  }
+
+  clearHighscoresSnackBar() {
+    this._snackBar.open("Highscores cleared!", "Hide", {
+      duration: 2000
+    });
   }
 }

@@ -37,7 +37,7 @@ export class DataService {
   totalScores() {
     for (var i = 0; i < this.playerCount(); i++) {
       this.playerArray[i].totalScore = this.playerArray[i].scores.reduce(
-        (x, y) => x + y
+        (x, y) => x + y, 0
       );
     }
   }
