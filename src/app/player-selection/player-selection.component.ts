@@ -16,12 +16,9 @@ export class PlayerSelectionComponent implements OnInit {
     private _snackBar: MatSnackBar,
     private utility: UtilityService
   ) {
-    if(this.data.playerCount() < 1)
-    {
+    if (this.data.playerCount() < 1) {
       this.enoughPlayers = false;
-    }
-    else
-    {
+    } else {
       this.enoughPlayers = true;
     }
   }
@@ -30,21 +27,31 @@ export class PlayerSelectionComponent implements OnInit {
 
   ngOnInit() {
     this.isMobile = this.utility.GetMediaQuery();
+    this.addEnterEventListener();
+  }
+
+  addEnterEventListener() {
+    var nameInput = document.getElementById("nameInput");
+
+    nameInput.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13 || event.which === 13) {
+        document.getElementById("add-player-btn").click();
+      }
+    });
   }
 
   pushPlayer() {
     var element = <HTMLInputElement>document.getElementById("nameInput");
     var nameInput = (<HTMLInputElement>document.getElementById("nameInput"))
       .value;
-    if(nameInput === "") {
+    if (nameInput === "") {
       this.noPlayerEnteredSnackBar();
-    }
-    else {
-    var playerObject = new PlayerObject(nameInput);
-    this.data.addPlayer(playerObject);
-    this.enoughPlayers = true;
-    this.playerAddedSnackBar();
-    element.value = "";
+    } else {
+      var playerObject = new PlayerObject(nameInput);
+      this.data.addPlayer(playerObject);
+      this.enoughPlayers = true;
+      this.playerAddedSnackBar();
+      element.value = "";
     }
   }
 
