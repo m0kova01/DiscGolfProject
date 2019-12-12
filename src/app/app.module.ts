@@ -66,12 +66,7 @@ import { WeatherService } from './services/weather.service';
     MatGridListModule,
     MatBottomSheetModule,
     MatExpansionModule,
-<<<<<<< HEAD
-    HttpClientModule,
-    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
-=======
     HttpClientModule
->>>>>>> parent of ca51461... begun transforming app into a progressive web app
   ],
   providers: [UtilityService],
   bootstrap: [AppComponent],
