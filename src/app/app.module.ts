@@ -69,7 +69,7 @@ import { environment } from '../environments/environment';
     MatBottomSheetModule,
     MatExpansionModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [UtilityService],
   bootstrap: [AppComponent],
