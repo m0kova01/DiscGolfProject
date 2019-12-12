@@ -30,6 +30,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
 import { WeatherService } from './services/weather.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -66,7 +68,8 @@ import { WeatherService } from './services/weather.service';
     MatGridListModule,
     MatBottomSheetModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [UtilityService],
   bootstrap: [AppComponent],
