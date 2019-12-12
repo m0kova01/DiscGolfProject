@@ -30,8 +30,6 @@ import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
 import { WeatherService } from './services/weather.service';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 
 
 
@@ -68,8 +66,12 @@ import { environment } from '../environments/environment';
     MatGridListModule,
     MatBottomSheetModule,
     MatExpansionModule,
+<<<<<<< HEAD
     HttpClientModule,
     ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
+=======
+    HttpClientModule
+>>>>>>> parent of ca51461... begun transforming app into a progressive web app
   ],
   providers: [UtilityService],
   bootstrap: [AppComponent],

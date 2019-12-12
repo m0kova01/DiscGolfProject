@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
   { path: "game", component: GameComponent },
   { path: "results", component: ResultsComponent },
-  { path: "weather", component: WeatherComponent }
+  { path: "weather", component: WeatherComponent },
+
 ];
 
 @NgModule({
