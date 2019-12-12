@@ -1,0 +1,88 @@
+{
+  "configVersion": 1,
+  "timestamp": 1576120727259,
+  "index": "https://m0kova01.github.io/DiscGolfProject/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://m0kova01.github.io/DiscGolfProject/favicon.ico",
+        "https://m0kova01.github.io/DiscGolfProject/index.html",
+        "https://m0kova01.github.io/DiscGolfProject/main-es2015.97316d0f6d7114858268.js",
+        "https://m0kova01.github.io/DiscGolfProject/main-es5.97316d0f6d7114858268.js",
+        "https://m0kova01.github.io/DiscGolfProject/manifest.webmanifest",
+        "https://m0kova01.github.io/DiscGolfProject/polyfills-es2015.2987770fde9daa1d8a2e.js",
+        "https://m0kova01.github.io/DiscGolfProject/polyfills-es5.6696c533341b95a3d617.js",
+        "https://m0kova01.github.io/DiscGolfProject/runtime-es2015.edb2fcf2778e7bf1d426.js",
+        "https://m0kova01.github.io/DiscGolfProject/runtime-es5.edb2fcf2778e7bf1d426.js",
+        "https://m0kova01.github.io/DiscGolfProject/styles.3866fd2458d833d594c6.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://m0kova01.github.io/DiscGolfProject/DiscGolfMontage2 (2).78a1b4ca3d5b0ad09424.gif",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/100.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/1024.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/128.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/144.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/152.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/196.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/256.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/512.png",
+        "https://m0kova01.github.io/DiscGolfProject/assets/icons/72.png",
+        "https://m0kova01.github.io/DiscGolfProject/blueSky.8611c29220b67d6ddbd4.jpg",
+        "https://m0kova01.github.io/DiscGolfProject/mobileBackground.cdf542a3990df0f16f7c.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://m0kova01.github.io/DiscGolfProject/DiscGolfMontage2 (2).78a1b4ca3d5b0ad09424.gif": "33503bc30582c69125349030adb802ab566c8d83",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/100.png": "f5a79f977fc648749f07ac51c5ddafb83135d4a2",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/1024.png": "007920bd6513a1de57662fd34ff9218415d2bc38",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/128.png": "4d958c43d1fe7e825577f7ae973e39dc2d29f67d",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/144.png": "90b913e92eadf95f6b7ea5e81b025acd9897eca0",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/152.png": "9691dde2888e55b2f2c8a3c30931fb789b34ad98",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/196.png": "6d45783685cbd5c2020137655f41c16473435abd",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/256.png": "16902d97557e1ddb73de3fd7702e34015d9f80d7",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/512.png": "3839303771fad7bc05c28e4618b443434d3649d4",
+    "https://m0kova01.github.io/DiscGolfProject/assets/icons/72.png": "e75dfbea43101a7fba89d76fb7436369a11bdca3",
+    "https://m0kova01.github.io/DiscGolfProject/blueSky.8611c29220b67d6ddbd4.jpg": "f2de5e56a150475a3740df30a70989924935bd25",
+    "https://m0kova01.github.io/DiscGolfProject/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://m0kova01.github.io/DiscGolfProject/index.html": "c7ea729550a1d343a545c622414c10f948707307",
+    "https://m0kova01.github.io/DiscGolfProject/main-es2015.97316d0f6d7114858268.js": "a6fe06334307dc8dbd49bf4eb1bab731790150d2",
+    "https://m0kova01.github.io/DiscGolfProject/main-es5.97316d0f6d7114858268.js": "6884b9bdc26eb2cb4f0bfd6f79c192d121762166",
+    "https://m0kova01.github.io/DiscGolfProject/manifest.webmanifest": "e9ede2d855d01439f365cd64314d9477e709ff86",
+    "https://m0kova01.github.io/DiscGolfProject/mobileBackground.cdf542a3990df0f16f7c.jpg": "e8bfb9a9d2346382636d108715b0b9f49ce946a1",
+    "https://m0kova01.github.io/DiscGolfProject/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
+    "https://m0kova01.github.io/DiscGolfProject/polyfills-es5.6696c533341b95a3d617.js": "45c51483238468881240579c3fdecd19144cff17",
+    "https://m0kova01.github.io/DiscGolfProject/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://m0kova01.github.io/DiscGolfProject/runtime-es5.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://m0kova01.github.io/DiscGolfProject/styles.3866fd2458d833d594c6.css": "c1e4046958858604759a08662c0d1e3fd95082d4"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
