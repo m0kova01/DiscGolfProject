@@ -4,7 +4,7 @@ Currently working on:
     Additional styling.
     Adding city search in weather component.
     Letting players choose how many holes they want to play.
-    Turning app into a progressive web app to allow users to download use offline.
+    Turning app into a progressive web app to allow users to download and use offline.
 
 Recent Updates:
     Clearing highscores now gives visual feedback.
