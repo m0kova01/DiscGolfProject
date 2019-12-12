@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1576122676905,
+  "timestamp": 1576122922271,
   "index": "https://m0kova01.github.io/DiscGolfProject/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://m0kova01.github.io/DiscGolfProject/favicon.ico",
         "https://m0kova01.github.io/DiscGolfProject/index.html",
-        "https://m0kova01.github.io/DiscGolfProject/main-es2015.97316d0f6d7114858268.js",
-        "https://m0kova01.github.io/DiscGolfProject/main-es5.97316d0f6d7114858268.js",
+        "https://m0kova01.github.io/DiscGolfProject/main-es2015.7a9b906e8626e0c81fd5.js",
+        "https://m0kova01.github.io/DiscGolfProject/main-es5.7a9b906e8626e0c81fd5.js",
         "https://m0kova01.github.io/DiscGolfProject/manifest.webmanifest",
         "https://m0kova01.github.io/DiscGolfProject/polyfills-es2015.2987770fde9daa1d8a2e.js",
         "https://m0kova01.github.io/DiscGolfProject/polyfills-es5.6696c533341b95a3d617.js",
@@ -56,9 +56,9 @@
     "https://m0kova01.github.io/DiscGolfProject/assets/icons/72.png": "e75dfbea43101a7fba89d76fb7436369a11bdca3",
     "https://m0kova01.github.io/DiscGolfProject/blueSky.8611c29220b67d6ddbd4.jpg": "f2de5e56a150475a3740df30a70989924935bd25",
     "https://m0kova01.github.io/DiscGolfProject/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://m0kova01.github.io/DiscGolfProject/index.html": "c7ea729550a1d343a545c622414c10f948707307",
-    "https://m0kova01.github.io/DiscGolfProject/main-es2015.97316d0f6d7114858268.js": "a6fe06334307dc8dbd49bf4eb1bab731790150d2",
-    "https://m0kova01.github.io/DiscGolfProject/main-es5.97316d0f6d7114858268.js": "6884b9bdc26eb2cb4f0bfd6f79c192d121762166",
+    "https://m0kova01.github.io/DiscGolfProject/index.html": "786c2ceac2278b9001db933f666048e171e49b3f",
+    "https://m0kova01.github.io/DiscGolfProject/main-es2015.7a9b906e8626e0c81fd5.js": "3039c0c607b9b2eb455951032f9f0ed7cb52c3de",
+    "https://m0kova01.github.io/DiscGolfProject/main-es5.7a9b906e8626e0c81fd5.js": "cfc32c07e4e6024b8d293ded240a60a15630e596",
     "https://m0kova01.github.io/DiscGolfProject/manifest.webmanifest": "e9ede2d855d01439f365cd64314d9477e709ff86",
     "https://m0kova01.github.io/DiscGolfProject/mobileBackground.cdf542a3990df0f16f7c.jpg": "e8bfb9a9d2346382636d108715b0b9f49ce946a1",
     "https://m0kova01.github.io/DiscGolfProject/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
