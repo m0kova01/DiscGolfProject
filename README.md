@@ -2,10 +2,12 @@ This project is simply a hobby project that I made for me and my friends. It can
 
 Currently working on:
     Additional styling.
-    Adding a weather api.
+    Adding city search in weather component.
+    Letting players choose how many holes they want to play.
 
 Recent Updates:
     Clearing highscores now gives visual feedback.
     Can no longer add a player with no name.
     Can no longer start the game with no players added.
     New styling for mobile and desktop environments.
+    Added OpenWeather API to use in weather component.

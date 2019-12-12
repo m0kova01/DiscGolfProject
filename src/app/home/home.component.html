@@ -19,6 +19,11 @@
         Highscores
       </button>
     </div>
+    <div fxLayoutAlign="flex-end">
+      <button mat-button routerLink="/weather" class="button">
+        Weather
+      </button>
+    </div>
     <div fxLayoutAlign="center">
       <mat-expansion-panel
         [class.expansion-panel-desktop]="!isMobile"
@@ -38,6 +43,9 @@
             <strong>Highscores:</strong> Lists the top 10 scores from your
             games.
           </li>
+          <li>
+              <strong>Weather:</strong> Displays the current weather based on your location.
+            </li>
         </ul>
         <hr />
         <h3>Keeping Score</h3>

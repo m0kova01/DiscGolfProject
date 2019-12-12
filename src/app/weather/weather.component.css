@@ -1,0 +1,63 @@
+.desktop {
+    min-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    background-image: url("img/mobileBackground.jpg"); /*Using mobile background picture for desktop because it looks better */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .mobile {
+    min-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    background-image: url("img/mobileBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .main-container {
+    border-radius: 10px;
+    background-image: url("img/blueSky.jpg");
+    background-size: cover;
+  }
+
+  .button {
+    margin: 10px;
+    background-color: #F9F9F8;
+    color: black;
+  }
+  
+  .buttons {
+    color: #2B292B;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+  }
+  .intro {
+    padding-right: 40px;
+    padding-left: 40px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  .location {
+    padding-right: 40px;
+    padding-left: 80px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .current {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }

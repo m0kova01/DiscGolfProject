@@ -26,6 +26,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { UtilityService } from './services/utility.service';
+import { WeatherComponent } from './weather/weather.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './services/data.service';
+import { WeatherService } from './services/weather.service';
 
 
 
@@ -38,6 +42,7 @@ import { UtilityService } from './services/utility.service';
     HomeComponent,
     GameComponent,
     ResultsComponent,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +66,7 @@ import { UtilityService } from './services/utility.service';
     MatGridListModule,
     MatBottomSheetModule,
     MatExpansionModule,
+    HttpClientModule
   ],
   providers: [UtilityService],
   bootstrap: [AppComponent],
