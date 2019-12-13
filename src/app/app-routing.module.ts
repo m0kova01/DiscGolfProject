@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: "highscores", component: HighscoresComponent },
   { path: "player-selection", component: PlayerSelectionComponent },
   { path: "home", component: HomeComponent },
-  { path: "", pathMatch: "full", redirectTo: "home" },
   { path: "game", component: GameComponent },
   { path: "results", component: ResultsComponent },
   { path: "weather", component: WeatherComponent },

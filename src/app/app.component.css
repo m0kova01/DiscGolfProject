@@ -1,6 +1,83 @@
-.main-grid {
+
+.desktop {
     min-width: 100%;
-    min-height: calc(100vh - 100px);
+    min-height: 100%;
     margin: auto;
-    align-content: center;
-}
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    background-image: url("img/mobileBackground.jpg"); /*Using mobile background picture for desktop because it looks better */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .mobile {
+    min-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    background-image: url("img/mobileBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .main-container-desktop {
+    background-color: #F9F9F8;
+    border-radius: 10px;
+  }
+  .main-container-mobile {
+    background-color: #F9F9F8;
+    border-radius: 0px;
+  }
+  .welcome-label-desktop {
+    color: #E3E3DA;
+    background-color: #7f0000;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 10px;
+  }
+  .welcome-label-mobile {
+    color: #E3E3DA;
+    background-color: #7f0000;
+    padding-top: 10px;
+  }
+  .button {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #F9F9F8;
+    color: #7f0000;
+  }
+  
+  .buttons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px;
+    color: #2B292B;
+  }
+  
+  .how-to-play {
+    margin-bottom: 10px;
+  }
+  
+  .feature-list {
+    list-style-type: none;
+    width: 80%;
+  }
+  
+  .score-list {
+    width: 80%;
+  }
+  .expansion-panel-desktop {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+  }
+  .expansion-panel-mobile {
+    border-radius: 0px;
+  }
