@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../services/data.service";
-import { PlayerAndIndex } from "../game/game.component";
 import { PlayerObject } from "../models/PlayerObject";
 import { UtilityService } from "../services/utility.service";
 import { MatSnackBar } from "@angular/material/snack-bar";

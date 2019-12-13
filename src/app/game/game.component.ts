@@ -1,7 +1,8 @@
 import { Component, OnInit, OnChanges } from "@angular/core";
 import { DataService } from "../services/data.service";
 import { FormGroup, FormArray, FormControl } from "@angular/forms";
-import { UtilityService } from '../services/utility.service';
+import { UtilityService } from "../services/utility.service";
+import { PlayerObject } from '../models/PlayerObject';
 
 @Component({
   selector: "app-game",
@@ -10,61 +11,30 @@ import { UtilityService } from '../services/utility.service';
 })
 export class GameComponent implements OnInit {
   isMobile: boolean;
-  playerAndID: PlayerAndIndex[];
+  playerArray: PlayerObject[];
   formGroup: FormGroup;
-  holes: number[];
 
-  constructor(private data: DataService, private utility: UtilityService) { }
+  constructor(private data: DataService, private utility: UtilityService) {}
 
   ngOnInit() {
-    this.playerAndID = [];
-    this.holes = [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18
-    ];
-    for (var i = 0; i < this.data.playerCount(); i++) {
-      this.playerAndID.push(
-        new PlayerAndIndex(this.data.returnIndexName(i), i)
-      );
-    }
+    this.playerArray = this.data.playerArray;
 
     var nameArray = new FormArray([]);
-    this.playerAndID.forEach(element => {
+    this.playerArray.forEach(element => {
       var scoresArray = new FormArray([]);
       nameArray.push(scoresArray);
-      this.holes.forEach(element => {
+      this.data.holes.forEach(element => {
         scoresArray.push(new FormControl(""));
       });
     });
     this.formGroup = new FormGroup({
       values: nameArray
     });
-
-    if (localStorage.getItem("arrayOfHighScores") === null) {
-      this.data.arrayOfHighScores = [];
-    }
   }
-
 
   addScoresToArray() {
     var firstArray = this.formGroup.value.values;
-    for (var i = 0; i < this.playerAndID.length; i++) {
+    for (var i = 0; i < this.playerArray.length; i++) {
       for (var j = 0; j < 18; j++) {
         if (firstArray[i][j] > 0) {
           this.data.addToScores(firstArray[i][j], i);
@@ -75,11 +45,4 @@ export class GameComponent implements OnInit {
     }
   }
 }
-export class PlayerAndIndex {
-  name: string;
-  index: number;
-  constructor(theName: string, id: number) {
-    this.name = theName;
-    this.index = id;
-  }
-}
+

@@ -2,13 +2,13 @@
   <div class="tab-container" [formGroup]="formGroup">
     <mat-card>
       <mat-tab-group class="tabs" formArrayName="values">
-        <ng-container *ngFor="let hole of holes; index as x">
+        <ng-container *ngFor="let hole of this.data.holes; index as x">
           <mat-tab label="{{ hole }}">
             <div
-              *ngFor="let player of playerAndID; index as y"
+              *ngFor="let player of playerArray; index as y"
               [formArrayName]="y"
             >
-              <h3>{{ player.name }}</h3>
+              <h3>{{ player.playerName }}</h3>
               <mat-form-field class="scoreInput">
                 <input
                   matInput
@@ -19,7 +19,7 @@
                   [formControlName]="x"
                 />
               </mat-form-field>
-              <div class="submit-game-button" *ngIf="(hole==18 && (y == playerAndID.length-1))">
+              <div class="submit-game-button" *ngIf="(hole==18 && (y == playerArray.length-1))">
                 <button
                   mat-raised-button
                   (click)="addScoresToArray()"

@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
 import { PlayerObject } from "../models/PlayerObject";
-import { EventEmitter } from 'protractor';
 
 @Injectable({
   providedIn: "root"
 })
 export class DataService {
-  private playerArray: PlayerObject[];
+  public playerArray: PlayerObject[];
   arrayOfHighScores: PlayerObject[];
+  holes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
   constructor() {
     this.playerArray = [];
@@ -38,7 +38,8 @@ export class DataService {
   totalScores() {
     for (var i = 0; i < this.playerCount(); i++) {
       this.playerArray[i].totalScore = this.playerArray[i].scores.reduce(
-        (x, y) => x + y, 0
+        (x, y) => x + y,
+        0
       );
     }
   }
@@ -61,12 +62,12 @@ export class DataService {
   clearPlayerArr() {
     this.playerArray = [];
   }
-  clearHighscores(){
+  clearHighscores() {
     this.arrayOfHighScores = [];
     localStorage.setItem(
       "arrayOfHighScores",
       JSON.stringify(this.arrayOfHighScores)
-    )
+    );
   }
 
   generateNewHighScores(currentGameScores: PlayerObject[]) {
@@ -99,7 +100,7 @@ export class DataService {
 
   returnHighScores() {
     var retrievedList = localStorage.getItem("arrayOfHighScores");
-    this.arrayOfHighScores = (JSON.parse(retrievedList));
+    this.arrayOfHighScores = JSON.parse(retrievedList);
     return this.arrayOfHighScores;
   }
 }
