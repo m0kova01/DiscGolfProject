@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { PlayerObject } from "../models/PlayerObject";
+import { EventEmitter } from 'protractor';
 
 @Injectable({
   providedIn: "root"

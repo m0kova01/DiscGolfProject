@@ -13,10 +13,10 @@ export class WeatherComponent implements OnInit {
   weather;
   isMobile;
   constructor(private weatherService: WeatherService, private utility: UtilityService) {
-    this.isMobile = this.utility.GetMediaQuery();
    }
 
   ngOnInit() {
+    this.isMobile = this.utility.GetMediaQuery();
     this.getLocation();
   }
 

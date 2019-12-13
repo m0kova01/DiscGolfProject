@@ -13,12 +13,14 @@ export class ResultsComponent implements OnInit {
   displayedColumns: string[] = ["position", "name", "score"];
   sortedPlayersAndScores: PlayerObject[];
   resultsData: PeriodicElement[];
+  isMobile: boolean;
 
-  constructor(private data: DataService, private utility: UtilityService) {
+  constructor(private data: DataService, private utility: UtilityService) {}
+  
+  ngOnInit() {
     this.data.totalScores();
     this.sortedPlayersAndScores = this.data.insertionSort();
     this.resultsData = [];
-    
 
     for (var i = 0; i < this.data.playerCount(); i++) {
       this.resultsData[i] = {
@@ -29,8 +31,6 @@ export class ResultsComponent implements OnInit {
     }
     this.data.generateNewHighScores(this.sortedPlayersAndScores);
   }
-  isMobile: boolean;
-  ngOnInit() {}
 
   clearPlayers() {
     this.data.clearPlayerArr();

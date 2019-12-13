@@ -15,17 +15,16 @@ export class PlayerSelectionComponent implements OnInit {
     private data: DataService,
     private _snackBar: MatSnackBar,
     private utility: UtilityService
-  ) {
+  ) {}
+
+  isMobile: boolean;
+
+  ngOnInit() {
     if (this.data.playerCount() < 1) {
       this.enoughPlayers = false;
     } else {
       this.enoughPlayers = true;
     }
-  }
-
-  isMobile: boolean;
-
-  ngOnInit() {
     this.isMobile = this.utility.GetMediaQuery();
     this.addEnterEventListener();
   }

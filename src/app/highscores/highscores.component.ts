@@ -20,12 +20,15 @@ export class HighscoresComponent implements OnInit {
   displayedColumns: string[] = ["position", "name", "score"];
   dataSource: PeriodicElement[];
   listOfScores: PlayerObject[];
+  isMobile: boolean;
 
   constructor(
     private data: DataService,
     private utility: UtilityService,
     private _snackBar: MatSnackBar
-  ) {
+  ) {}
+  
+  ngOnInit() {
     this.listOfScores = this.data.returnHighScores();
     this.dataSource = [];
     if (this.listOfScores != null) {
@@ -38,8 +41,6 @@ export class HighscoresComponent implements OnInit {
       }
     }
   }
-  isMobile: boolean;
-  ngOnInit() {}
 
   clearHighscores() {
     this.data.clearHighscores();

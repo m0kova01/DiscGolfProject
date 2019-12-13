@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnChanges } from "@angular/core";
 import { DataService } from "../services/data.service";
 import { FormGroup, FormArray, FormControl } from "@angular/forms";
 import { UtilityService } from '../services/utility.service';
@@ -9,10 +9,14 @@ import { UtilityService } from '../services/utility.service';
   styleUrls: ["./game.component.css"]
 })
 export class GameComponent implements OnInit {
+  isMobile: boolean;
   playerAndID: PlayerAndIndex[];
   formGroup: FormGroup;
   holes: number[];
-  constructor(private data: DataService, private utility: UtilityService) {
+
+  constructor(private data: DataService, private utility: UtilityService) { }
+
+  ngOnInit() {
     this.playerAndID = [];
     this.holes = [
       1,
@@ -52,14 +56,11 @@ export class GameComponent implements OnInit {
       values: nameArray
     });
 
-    if(localStorage.getItem("arrayOfHighScores") === null)
-    {
-      this.data.arrayOfHighScores=[];
+    if (localStorage.getItem("arrayOfHighScores") === null) {
+      this.data.arrayOfHighScores = [];
     }
   }
-  isMobile: boolean;
 
-  ngOnInit() {}
 
   addScoresToArray() {
     var firstArray = this.formGroup.value.values;
