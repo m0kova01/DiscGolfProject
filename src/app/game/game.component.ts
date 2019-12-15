@@ -14,12 +14,12 @@ export class GameComponent implements OnInit {
   playerArray: PlayerObject[];
   formGroup: FormGroup;
 
-  constructor(private data: DataService, private utility: UtilityService) {}
+  constructor(public data: DataService, private utility: UtilityService) {}
 
   ngOnInit() {
     this.playerArray = this.data.playerArray;
     this.isMobile = this.utility.GetMediaQuery();
-    
+
     var nameArray = new FormArray([]);
     this.playerArray.forEach(element => {
       var scoresArray = new FormArray([]);
