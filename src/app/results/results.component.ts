@@ -18,6 +18,8 @@ export class ResultsComponent implements OnInit {
   constructor(private data: DataService, private utility: UtilityService) {}
   
   ngOnInit() {
+    this.isMobile = this.utility.GetMediaQuery();
+
     this.data.totalScores();
     this.sortedPlayersAndScores = this.data.insertionSort();
     this.resultsData = [];

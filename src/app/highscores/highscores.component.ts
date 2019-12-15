@@ -28,6 +28,8 @@ export class HighscoresComponent implements OnInit {
   ) {}
   
   ngOnInit() {
+    this.isMobile = this.utility.GetMediaQuery();
+
     this.listOfScores = this.data.returnHighScores();
     this.dataSource = [];
     if (this.listOfScores != null) {

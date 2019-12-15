@@ -19,7 +19,7 @@
                   [formControlName]="x"
                 />
               </mat-form-field>
-              <div class="submit-game-button" *ngIf="(hole==18 && (y == playerArray.length-1))">
+              <div class="submit-game-button" *ngIf="(hole===18 && (y === playerArray.length-1))">
                 <button
                   mat-raised-button
                   (click)="addScoresToArray()"

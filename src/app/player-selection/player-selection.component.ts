@@ -49,15 +49,13 @@ export class PlayerSelectionComponent implements OnInit {
       var playerObject = new PlayerObject(nameInput);
       this.data.addPlayer(playerObject);
       this.enoughPlayers = true;
-      this.playerAddedSnackBar();
+      this.playerAddedSnackBar(nameInput);
       element.value = "";
     }
   }
 
-  playerAddedSnackBar() {
-    var nameInput = (<HTMLInputElement>document.getElementById("nameInput"))
-      .value;
-    this._snackBar.open(nameInput + " added!", "Hide", {
+  playerAddedSnackBar(name: string) {
+    this._snackBar.open(name + " added!", "Hide", {
       duration: 2000
     });
   }

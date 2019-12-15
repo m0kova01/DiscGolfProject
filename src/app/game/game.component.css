@@ -23,8 +23,8 @@
   align-items: center;
   flex: 1 1 auto;
   background-image: url("img/mobileBackground.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .tabs {
