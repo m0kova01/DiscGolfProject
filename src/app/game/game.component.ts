@@ -16,9 +16,9 @@ export class GameComponent implements OnInit {
 
   constructor(public data: DataService, private utility: UtilityService) {}
 
-  ngOnInit() {
-    this.playerArray = this.data.playerArray;
+  ngOnInit() {    
     this.isMobile = this.utility.GetMediaQuery();
+    this.playerArray = this.data.playerArray;
 
     var nameArray = new FormArray([]);
     this.playerArray.forEach(element => {

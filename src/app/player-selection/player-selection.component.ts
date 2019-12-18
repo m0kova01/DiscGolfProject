@@ -26,23 +26,9 @@ export class PlayerSelectionComponent implements OnInit {
       this.enoughPlayers = true;
     }
     this.isMobile = this.utility.GetMediaQuery();
-    this.addEnterEventListener();
   }
 
-  addEnterEventListener() {
-    var nameInput = document.getElementById("nameInput");
-
-    nameInput.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13 || event.which === 13) {
-        document.getElementById("add-player-btn").click();
-      }
-    });
-  }
-
-  pushPlayer() {
-    var element = <HTMLInputElement>document.getElementById("nameInput");
-    var nameInput = (<HTMLInputElement>document.getElementById("nameInput"))
-      .value;
+  pushPlayer(nameInput: string) {
     if (nameInput === "") {
       this.noPlayerEnteredSnackBar();
     } else {
@@ -50,7 +36,6 @@ export class PlayerSelectionComponent implements OnInit {
       this.data.addPlayer(playerObject);
       this.enoughPlayers = true;
       this.playerAddedSnackBar(nameInput);
-      element.value = "";
     }
   }
 
