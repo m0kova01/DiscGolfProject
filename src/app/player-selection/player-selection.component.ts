@@ -12,7 +12,7 @@ import { UtilityService } from "../services/utility.service";
 export class PlayerSelectionComponent implements OnInit {
   enoughPlayers: boolean;
   constructor(
-    private data: DataService,
+    public data: DataService,
     private _snackBar: MatSnackBar,
     private utility: UtilityService
   ) {}
