@@ -40,7 +40,9 @@
 }
 
 .player-row {
-    padding: 24px;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 .player-form {
   border-radius: 10px;
@@ -63,5 +65,18 @@
   color: #e3e3da;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
 
+.player-list {
+  list-style-type: none;
+  margin: 0.5em;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+.remove-button {
+  float: right;
+  border-radius: 5px;
+  border: 0px;
+  cursor: pointer;
+  background-color: transparent;
 }

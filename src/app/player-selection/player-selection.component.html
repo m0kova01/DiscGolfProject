@@ -9,6 +9,12 @@
                     <input matInput placeholder="Player Name" id="nameInput" #nameInput (keyup.enter)="pushPlayer(nameInput.value); nameInput.value=''">
                 </mat-form-field>
             </div>
+            <div *ngIf="enoughPlayers">
+                <ul *ngFor="let player of this.data.playerArray" class="player-list">
+                    <li class="player-list-name">{{player.playerName}}<button type="button" class="remove-button" (click)="removePlayer(player)">X</button></li>
+                    
+                </ul>
+            </div>
             <div class="new-player-button" fxLayoutAlign="center center">    
                     <button  mat-button type="button" class="button" id="add-player-btn" (click)="pushPlayer(nameInput.value); nameInput.value=''">Add Player</button>
             </div>
