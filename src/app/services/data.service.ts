@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { PlayerObject } from "../models/PlayerObject";
+import { Injectable } from '@angular/core';
+import { PlayerObject } from '../models/PlayerObject';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class DataService {
   public playerArray: PlayerObject[];
@@ -65,7 +65,7 @@ export class DataService {
   clearHighscores() {
     this.arrayOfHighScores = [];
     localStorage.setItem(
-      "arrayOfHighScores",
+      'arrayOfHighScores',
       JSON.stringify(this.arrayOfHighScores)
     );
   }
@@ -93,13 +93,13 @@ export class DataService {
       this.arrayOfHighScores.pop();
     }
     localStorage.setItem(
-      "arrayOfHighScores",
+      'arrayOfHighScores',
       JSON.stringify(this.arrayOfHighScores)
     );
   }
 
   returnHighScores() {
-    var retrievedList = localStorage.getItem("arrayOfHighScores");
+    var retrievedList = localStorage.getItem('arrayOfHighScores');
     this.arrayOfHighScores = JSON.parse(retrievedList);
     return this.arrayOfHighScores;
   }

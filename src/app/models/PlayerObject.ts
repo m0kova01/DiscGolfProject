@@ -7,4 +7,5 @@ export class PlayerObject {
   playerName: string;
   scores: number[];
   totalScore: number;
+  CurrentScore: number;
 }

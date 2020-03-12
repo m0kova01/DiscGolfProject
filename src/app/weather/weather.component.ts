@@ -21,7 +21,7 @@ export class WeatherComponent implements OnInit {
   }
 
   getLocation() {
-    if("geolocation" in navigator) {
+    if('geolocation' in navigator) {
       navigator.geolocation.watchPosition((success)=> {
         this.lat = success.coords.latitude;
         this.lon = success.coords.longitude;

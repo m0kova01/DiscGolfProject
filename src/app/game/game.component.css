@@ -34,11 +34,36 @@
 
 .tab-container {
   max-width: 85vw;
-  margin: auto; 
+  margin: auto;
 }
 
 .submit {
   float: right;
   margin-top: 10px;
   background-color: #5efc82;
+}
+
+.headers {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.headers label {
+  display: table-cell;
+  text-align: center;
+}
+
+.scores {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.score-row {
+  display: table-cell;
+  text-align: center;
 }

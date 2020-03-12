@@ -1,8 +1,8 @@
-import { Component, OnInit } from "@angular/core";
-import { DataService } from "../services/data.service";
-import { PlayerObject } from "../models/PlayerObject";
-import { UtilityService } from "../services/utility.service";
-import { MatSnackBar } from "@angular/material/snack-bar";
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { PlayerObject } from '../models/PlayerObject';
+import { UtilityService } from '../services/utility.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface PeriodicElement {
   position: number;
@@ -11,12 +11,12 @@ export interface PeriodicElement {
 }
 
 @Component({
-  selector: "app-highscores",
-  templateUrl: "./highscores.component.html",
-  styleUrls: ["./highscores.component.css"]
+  selector: 'app-highscores',
+  templateUrl: './highscores.component.html',
+  styleUrls: ['./highscores.component.css']
 })
 export class HighscoresComponent implements OnInit {
-  displayedColumns: string[] = ["position", "name", "score"];
+  displayedColumns: string[] = ['position', 'name', 'score'];
   dataSource: PeriodicElement[];
   listOfScores: PlayerObject[];
   isMobile: boolean;
@@ -50,7 +50,7 @@ export class HighscoresComponent implements OnInit {
   }
 
   clearHighscoresSnackBar() {
-    this._snackBar.open("Highscores cleared!", "Hide", {
+    this._snackBar.open('Highscores cleared!', 'Hide', {
       duration: 2000
     });
   }

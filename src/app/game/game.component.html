@@ -1,25 +1,42 @@
 <div [class.desktop]="!isMobile" [class.mobile]="isMobile">
   <div class="tab-container" [formGroup]="formGroup">
     <mat-card>
-      <mat-tab-group class="tabs" formArrayName="values">
+      <mat-tab-group
+        class="tabs"
+        formArrayName="values"
+        (selectedTabChange)="refreshScores()"
+      >
         <ng-container *ngFor="let hole of this.data.holes; index as x">
           <mat-tab label="{{ hole }}">
-            <div
+            <div class="headers">
+              <label>Player</label>
+              <label>Current Score</label>
+            </div>
+            <ng-container
               *ngFor="let player of playerArray; index as y"
               [formArrayName]="y"
             >
               <h3>{{ player.playerName }}</h3>
-              <mat-form-field class="scoreInput">
-                <input
-                  matInput
-                  placeholder="Score"
-                  type="number"
-                  class="form-control"
-                  name="score"
-                  [formControlName]="x"
-                />
-              </mat-form-field>
-              <div class="submit-game-button" *ngIf="(hole===18 && (y === playerArray.length-1))">
+              <div class="scores">
+                <mat-form-field class="score-row">
+                  <input
+                    matInput
+                    placeholder="Score"
+                    type="number"
+                    class="form-control"
+                    name="score"
+                    [formControlName]="x"
+                  />
+                </mat-form-field>
+
+                <div class="score-row" style="margin-left: 20px;">
+                  {{ player.CurrentScore }}
+                </div>
+              </div>
+              <div
+                class="submit-game-button"
+                *ngIf="hole === 18 && y === playerArray.length - 1"
+              >
                 <button
                   mat-raised-button
                   (click)="addScoresToArray()"
@@ -30,7 +47,7 @@
                   Submit
                 </button>
               </div>
-            </div>
+            </ng-container>
           </mat-tab>
         </ng-container>
       </mat-tab-group>

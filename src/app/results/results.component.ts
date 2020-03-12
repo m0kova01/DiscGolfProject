@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
-import { DataService } from "../services/data.service";
-import { PeriodicElement } from "../highscores/highscores.component";
-import { PlayerObject } from "../models/PlayerObject";
-import { UtilityService } from "../services/utility.service";
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { PeriodicElement } from '../highscores/highscores.component';
+import { PlayerObject } from '../models/PlayerObject';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
-  selector: "app-results",
-  templateUrl: "./results.component.html",
-  styleUrls: ["./results.component.css"]
+  selector: 'app-results',
+  templateUrl: './results.component.html',
+  styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  displayedColumns: string[] = ["position", "name", "score"];
+  displayedColumns: string[] = ['position', 'name', 'score'];
   sortedPlayersAndScores: PlayerObject[];
   resultsData: PeriodicElement[];
   isMobile: boolean;

@@ -28,9 +28,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { UtilityService } from './services/utility.service';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DataService } from './services/data.service';
-import { WeatherService } from './services/weather.service';
-
 
 
 

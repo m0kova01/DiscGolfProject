@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core";
-import { PlayerObject } from "../models/PlayerObject";
-import { DataService } from "../services/data.service";
-import { MatSnackBar } from "@angular/material/snack-bar";
-import { UtilityService } from "../services/utility.service";
+import { Component, OnInit } from '@angular/core';
+import { PlayerObject } from '../models/PlayerObject';
+import { DataService } from '../services/data.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
-  selector: "app-player-selection",
-  templateUrl: "./player-selection.component.html",
-  styleUrls: ["./player-selection.component.css"]
+  selector: 'app-player-selection',
+  templateUrl: './player-selection.component.html',
+  styleUrls: ['./player-selection.component.css']
 })
 export class PlayerSelectionComponent implements OnInit {
   enoughPlayers: boolean;
@@ -30,7 +30,7 @@ export class PlayerSelectionComponent implements OnInit {
   }
 
   pushPlayer(nameInput: string) {
-    if (nameInput === "") {
+    if (nameInput === '') {
       this.noPlayerEnteredSnackBar();
     } else {
       var playerObject = new PlayerObject(nameInput);
@@ -51,18 +51,18 @@ export class PlayerSelectionComponent implements OnInit {
   }
 
   playerAddedSnackBar(name: string) {
-    this._snackBar.open(name + " added!", "Hide", {
+    this._snackBar.open(name + ' added!', 'Hide', {
       duration: 2000
     });
   }
 
   noPlayerEnteredSnackBar() {
-    this._snackBar.open("Please enter a player name!", "Hide", {
+    this._snackBar.open('Please enter a player name!', 'Hide', {
       duration: 2000
     });
   }
   playerRemovedSnackBar(name: string) {
-    this._snackBar.open(name + " removed!", "Hide", {
+    this._snackBar.open(name + ' removed!', 'Hide', {
       duration: 2000
     });
   }
