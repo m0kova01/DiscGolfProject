@@ -15,8 +15,8 @@ export class ResultsComponent implements OnInit {
   resultsData: PeriodicElement[];
   isMobile: boolean;
 
-  constructor(private data: DataService, private utility: UtilityService) {}
-  
+  constructor(private data: DataService, private utility: UtilityService) { }
+
   ngOnInit() {
     this.isMobile = this.utility.GetMediaQuery();
 
@@ -24,7 +24,7 @@ export class ResultsComponent implements OnInit {
     this.sortedPlayersAndScores = this.data.insertionSort();
     this.resultsData = [];
 
-    for (var i = 0; i < this.data.playerCount(); i++) {
+    for (let i = 0; i < this.data.playerCount(); i++) {
       this.resultsData[i] = {
         position: i + 1,
         name: this.sortedPlayersAndScores[i].playerName,

@@ -13,7 +13,7 @@ export class PlayerSelectionComponent implements OnInit {
   enoughPlayers: boolean;
   constructor(
     public data: DataService,
-    private _snackBar: MatSnackBar,
+    private snackBar: MatSnackBar,
     private utility: UtilityService
   ) {}
 
@@ -33,7 +33,7 @@ export class PlayerSelectionComponent implements OnInit {
     if (nameInput === '') {
       this.noPlayerEnteredSnackBar();
     } else {
-      var playerObject = new PlayerObject(nameInput);
+      const playerObject = new PlayerObject(nameInput);
       this.data.addPlayer(playerObject);
       this.enoughPlayers = true;
       this.playerAddedSnackBar(nameInput);
@@ -51,18 +51,18 @@ export class PlayerSelectionComponent implements OnInit {
   }
 
   playerAddedSnackBar(name: string) {
-    this._snackBar.open(name + ' added!', 'Hide', {
+    this.snackBar.open(name + ' added!', 'Hide', {
       duration: 2000
     });
   }
 
   noPlayerEnteredSnackBar() {
-    this._snackBar.open('Please enter a player name!', 'Hide', {
+    this.snackBar.open('Please enter a player name!', 'Hide', {
       duration: 2000
     });
   }
   playerRemovedSnackBar(name: string) {
-    this._snackBar.open(name + ' removed!', 'Hide', {
+    this.snackBar.open(name + ' removed!', 'Hide', {
       duration: 2000
     });
   }

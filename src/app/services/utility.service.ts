@@ -1,5 +1,5 @@
 import { Injectable, ApplicationRef } from '@angular/core';
-import { MediaMatcher } from '@angular/cdk/layout'
+import { MediaMatcher } from '@angular/cdk/layout';
 
 
 @Injectable({
@@ -22,8 +22,12 @@ export class UtilityService {
     this.mediaQuery = this.media.matchMedia('(max-width: 800px)');
     this.mediaQuery2 = this.media.matchMedia('(min-width: 1020px)');
     this.mobileQueryListener = () => this.ref.tick();
-    this.mediaQuery.addListener(this.mobileQueryListener);
-    this.mediaQuery2.addListener(this.mobileQueryListener);
+    this.mediaQuery.addEventListener('change', () => {
+      this.mobileQueryListener();
+    });
+    this.mediaQuery2.addEventListener('change', () => {
+      this.mobileQueryListener();
+    });
     return this.mediaQuery.matches;
   }
 }

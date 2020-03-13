@@ -10,8 +10,8 @@ import { DataService } from '../services/data.service';
 export class HomeComponent implements OnInit {
   isMobile: boolean;
 
-  constructor(private utility: UtilityService, private data: DataService) {}
-  
+  constructor(private utility: UtilityService, private data: DataService) { }
+
   ngOnInit() {
     this.isMobile = this.utility.GetMediaQuery();
   }

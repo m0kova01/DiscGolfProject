@@ -24,16 +24,16 @@ export class HighscoresComponent implements OnInit {
   constructor(
     private data: DataService,
     private utility: UtilityService,
-    private _snackBar: MatSnackBar
-  ) {}
-  
+    private snackBar: MatSnackBar
+  ) { }
+
   ngOnInit() {
     this.isMobile = this.utility.GetMediaQuery();
 
     this.listOfScores = this.data.returnHighScores();
     this.dataSource = [];
     if (this.listOfScores != null) {
-      for (var i = 0; i < this.listOfScores.length; i++) {
+      for (let i = 0; i < this.listOfScores.length; i++) {
         this.dataSource[i] = {
           position: i + 1,
           name: this.listOfScores[i].playerName,
@@ -50,7 +50,7 @@ export class HighscoresComponent implements OnInit {
   }
 
   clearHighscoresSnackBar() {
-    this._snackBar.open('Highscores cleared!', 'Hide', {
+    this.snackBar.open('Highscores cleared!', 'Hide', {
       duration: 2000
     });
   }

@@ -20,10 +20,10 @@ export class GameComponent implements OnInit {
     this.isMobile = this.utility.GetMediaQuery();
     this.playerArray = this.data.playerArray;
 
-    var nameArray = new FormArray([]);
+    const nameArray = new FormArray([]);
     this.playerArray.forEach(element => {
       element.CurrentScore = 0;
-      var scoresArray = new FormArray([]);
+      const scoresArray = new FormArray([]);
       nameArray.push(scoresArray);
       this.data.holes.forEach(() => {
         scoresArray.push(new FormControl(''));
@@ -35,11 +35,10 @@ export class GameComponent implements OnInit {
   }
 
   addScoresToArray() {
-    var firstArray = this.formGroup.value.values;
-    for (var i = 0; i < this.playerArray.length; i++) {
-      for (var j = 0; j < 18; j++) {
+    const firstArray = this.formGroup.value.values;
+    for (let i = 0; i < this.playerArray.length; i++) {
+      for (let j = 0; j < 18; j++) {
         if (firstArray[i][j] > 0) {
-          //can't get a negative score
           this.data.addToScores(firstArray[i][j], i);
         } else {
           this.data.addToScores(0, i);
@@ -49,12 +48,11 @@ export class GameComponent implements OnInit {
   }
 
   refreshScores(): void {
-    var firstArray = this.formGroup.value.values;
-    for (var i = 0; i < this.playerArray.length; i++) {
+    const firstArray = this.formGroup.value.values;
+    for (let i = 0; i < this.playerArray.length; i++) {
       this.playerArray[i].CurrentScore = 0;
-      for (var j = 0; j < 18; j++) {
+      for (let j = 0; j < 18; j++) {
         if (firstArray[i][j] > 0) {
-          //can't get a negative score
           this.playerArray[i].CurrentScore += firstArray[i][j];
         }
       }
